@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Restaurant</title>
+    <style>
+        body, h1, h2, h3, p, ul, li, form {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #fff;
+            background-color: #333;
+            overflow-x: hidden;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #111;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        header nav ul li {
+            margin: 0 15px;
+        }
+
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        header .auth-buttons .btn {
+            margin-left: 10px;
+            background-color: #ffcc00;
+            color: #333;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        header .auth-buttons .btn:hover {
+            background-color: #e6b800;
+        }
+
+        #hero {
+            background-image: url(backgroud.jpg);
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+        }
+
+        #hero .hero-content {
+            max-width: 600px;
+        }
+
+        #hero .btn-primary {
+            background-color: #ffcc00;
+            color: #333;
+        }
+
+        #best-seller {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        #best-seller .dishes {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        #best-seller .dish {
+            flex: 1;
+            margin: 0 10px;
+            max-width: 300px;
+        }
+
+        #best-seller img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        #statistics {
+            background-color: #444;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        #statistics .stats {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        #statistics .stat {
+            flex: 1;
+            margin: 0 10px;
+        }
+
+        #subscription {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        #subscription form {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        #subscription input {
+            padding: 10px;
+            border: none;
+            border-radius: 5px 0 0 5px;
+            margin: 5px;
+        }
+
+        #subscription button {
+            padding: 10px;
+            border: none;
+            border-radius: 0 5px 5px 0;
+            background-color: #ffcc00;
+            color: #333;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+        #subscription button:hover {
+            background-color: #e6b800;
+        }
+
+        footer {
+            background-color: #111;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer ul {
+            list-style: none;
+            margin-bottom: 10px;
+            padding: 0;
+        }
+
+        footer ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        footer ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        footer .social-media a {
+            margin: 0 10px;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        /* Add media queries for responsiveness */
+        @media (max-width: 768px) {
+            #best-seller .dishes {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Restaurant Logo</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#product">Product</a></li>
+                <li><a href="#promo">Promo</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="auth-buttons">
+            <a href="#signup" class="btn">Sign Up</a>
+            <a href="#login" class="btn">Login</a>
+        </div>
+    </header>
+    
+    <section id="hero">
+        <div class="hero-content">
+            <h1>Welcome to Our Restaurant</h1>
+            <p>Delicious food made with fresh ingredients and a passion for great taste.</p>
+            <a href="#order" class="btn btn-primary">Order Now</a>
+        </div>
+    </section>
+    
+    <section id="best-seller">
+        <h2>Best Sellers</h2>
+        <div class="dishes">
+            <div class="dish">
+                <img src="dish1.jpg" alt="Dish 1">
+                <h3>Tarragon Butter Chicken</h3>
+                <p>Extra juicy breast fillet marinated with secret recipe.</p>
+            </div>
+            <div class="dish">
+                <img src="dish2.jpg" alt="Dish 2">
+                <h3>Butter Smash Beef Burger</h3>
+                <p>Aussie beef smash patty in butter brioche bun with cheese.</p>
+            </div>
+            <div class="dish">
+                <img src="dish3.jpg" alt="Dish 3">
+                <h3>Alfredo</h3>
+                <p>Creamy white sauce, Parmesan Cheese, Grilled Chicken.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="statistics">
+        <h2>Our Statistics</h2>
+        <div class="stats">
+            <div class="stat">123 Outlets</div>
+            <div class="stat">100 Chefs</div>
+            <div class="stat">300 Menus</div>
+            <div class="stat">30 Countries</div>
+        </div>
+    </section>
+    
+    <section id="subscription">
+        <h2>Subscribe to Our Newsletter</h2>
+        <form id="subscription-form">
+            <input type="email" id="email" placeholder="Enter your email" required>
+            <button type="submit" id="submit" class="btn btn-primary" onclick="check()">Subscribe</button>
+        </form>
+    </section>
+    
+    <footer>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="social-media">
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
+        </div>
+    </footer>
+    
+    <script>
+       var email_regex=/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+       var email=document.getElementById("email");
+       var submit=document.getElementById("submit");
+       function check(){
+        if (email.matches(email_regex)){
+            alert("Successfully Subscribed!");
+        }
+        else{
+            alert("Enter correct format of email");
+        }
+       }
+    </script>
+</body>
+</html>
